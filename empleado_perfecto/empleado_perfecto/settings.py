@@ -98,13 +98,17 @@ WSGI_APPLICATION = 'empleado_perfecto.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT','5432'),
+        'NAME': 'bdempleadoperfecto',  # El nombre de la base de datos
+        'USER': 'felipe',              # El nombre de usuario
+        'PASSWORD': 'qDglfazoMam63OJYwipSlNmKJ4hPOyld',  # La contraseña de la base de datos
+        'HOST': 'dpg-crqc3be8i6s73csg6g-a.oregon-postgres.render.com',  # Host proporcionado por Render
+        'PORT': '5432',                # El puerto para PostgreSQL
+        'OPTIONS': {
+            'sslmode': 'require',      # Requerir SSL para la conexión
+        }
     }
 }
+
 
 
 
