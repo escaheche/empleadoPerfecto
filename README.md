@@ -5,6 +5,6 @@ Se sube el backend en render https://empleadoperfecto.onrender.com y se agrego u
 url front:
 # https://escaheche.github.io/frontempleadoperfecto/login
 
-usuario: admin 
-contraseña : tu_contraseña
+- usuario: admin 
+- contraseña : tu_password
 
