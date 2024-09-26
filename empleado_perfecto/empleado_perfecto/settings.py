@@ -95,21 +95,22 @@ WSGI_APPLICATION = 'empleado_perfecto.wsgi.application'
   #      'NAME': BASE_DIR / 'db.sqlite3',
  #   }
 #}
-import os
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT', '5432'),  # Valor por defecto '5432' si no está especificado
+        'NAME': os.getenv('DB_NAME', 'bdempleadoperfecto_tgr1'),
+        'USER': os.getenv('DB_USER', 'bdempleadoperfecto_tgr1_user'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'W7bYMbtY4uAKwTpv3cpy5ETfnFZCChrw'),
+        'HOST': os.getenv('DB_HOST', 'dpg-crqe5odsvqrc73ctlfrg-a'),
+        'PORT': os.getenv('DB_PORT', '5432'),
         'OPTIONS': {
-            'sslmode': 'disable',
-        }
+            'sslmode': 'require',  # Si es necesario usar SSL
+        },
     }
 }
+
 
 
 
