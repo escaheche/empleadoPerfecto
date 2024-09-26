@@ -106,8 +106,8 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT', '5432'),  # Valor por defecto '5432' si no está especificado
         'OPTIONS': {
-            'sslmode': 'require',  # Requerir SSL para la conexión
-        },
+            'sslmode': 'disable',
+        }
     }
 }
 
